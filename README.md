@@ -192,8 +192,8 @@ The `defined?` check is necessary to avoid a dependency on Konacha in the produc
 environment.
 
 The `spec_dir` option tells Konacha where to find JavaScript specs. `driver`
-names a Capybara driver used for the `run` task (try `:webkit`, after
-installing [capybara-webkit](https://github.com/thoughtbot/capybara-webkit)).
+names a Capybara driver used for the `run` task (try `:poltergeist`, after
+installing [PhantomJS](https://github.com/jonleighton/poltergeist#installing-phantomjs)).
 The `stylesheets` option sets the stylesheets to be linked from the `<head>`
 of the test runner iframe. The values above are the defaults.
 
@@ -208,8 +208,11 @@ Konacha will make all three of chai's assertion styles available to you: `expect
 `should`, and `assert`. See the chai documentation for the details.
 
 If you use jQuery, you may want to check out [chai-jquery](https://github.com/jfirebaugh/chai-jquery)
-for some jQuery-specific assertions. You can add it painlessly with the
-[chai-jquery-rails](https://github.com/wordofchristian/chai-jquery-rails) gem.
+for some jQuery-specific assertions. There are a lot of interesting chai
+matchers out there, see [the chai plugins page](http://chaijs.com/plugins)
+
+To make all these available for your konacha environment, see the
+[Konacha-chai-matchers gem](https://github.com/matthijsgroen/konacha-chai-matchers)
 
 ## Templates / Fixtures
 
